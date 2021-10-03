@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app='MenuApp' lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap 5.1.1 CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>Main Menu</title>
+</head>
+<body>
+
+    <div class="container">
+        <!--        ui-router tag and the spinner component tag        -->
+        
+        <loading-spinner class='spinner'></loading-spinner>
+
+        <ui-view></ui-view>
+    </div>
+
+    
+    <!--                    Libraries           -1- -->
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-ui-router.min.js"></script>
+
+    <!--                    Modules              -2- -->
+    <script src="src/menuList/mainMenuApp.Module.js"></script>
+    <script src="src/spinner/spinner.Module.js"></script>
+    <script src="src/menuList//menuData/data.Module.js"></script>
+
+    <!--                    Artifact Component               -3- -->
+    <script src="src/menuList/CategoriesController.js"></script>
+    <script src="src/menulist/itemsController.js"></script>
+    <script src="src/menuList/menuData/menuData.Service.js"></script>
+    <script src="src/menulist/categories.component.js"></script>
+    <script src="src/menulist/itemsComponent.js"></script>
+    <script src="src/spinner/spinner.component.js"></script>
+    
+    <!--                    Routes                           -4- -->
+    <script src="router/router.js"></script>
+</body>
+</html>
