@@ -6,16 +6,16 @@
 
     configFunc.$inject = ['$stateProvider', '$urlRouterProvider'];
     function configFunc($stateProvider, $urlRouterProvider){
-        $urlRouterProvider.otherwise('/')
         
-        // home state
-        $stateProvider.state('home', {
+        $urlRouterProvider.otherwise('/');
+        
+        $stateProvider
+        .state('home', {
             url: '/',
             templateUrl: 'views/home.html'
-        });
+        })
         
-        // categories state
-        $stateProvider.state('categories', {
+        .state('categories', {
             url: '/categories',
             templateUrl: 'views/categories.html',
             controller: 'CategoriesController as ctrl',
@@ -26,10 +26,9 @@
                     })
                 }]
             }
-        });
+        })
         
-        // items state
-        $stateProvider.state('items', {
+        .state('items', {
             url: '/items/:id',
             templateUrl: '/views/itemsList.html',
             controller: 'ItemsController as ctrl',
