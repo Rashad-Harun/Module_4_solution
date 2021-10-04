@@ -30,7 +30,7 @@
         
         .state('items', {
             url: '/items/:id',
-            templateUrl: '/views/itemsList.html',
+            templateUrl: '/views/itemslist.html',
             controller: 'ItemsController as ctrl',
             resolve: {
                 items: ['MenuDataService', '$stateParams', function(MenuDataService, $stateParams){
