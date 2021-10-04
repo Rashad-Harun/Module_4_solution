@@ -2,7 +2,7 @@
 (()=> {
     'use strict';
     angular.module('MenuApp')
-    .component('items', {
+    .component('itemsList', {
         templateUrl: 'views/components/itemsComp.html',
         bindings: {
             listItems: '<',
